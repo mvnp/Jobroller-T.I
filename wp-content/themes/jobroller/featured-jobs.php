@@ -33,7 +33,21 @@
 					</dd>
 
 					<dt><?php _e( 'Location', APP_TD ); ?></dt>
-					<dd class="location"><?php jr_location(); ?></dd>
+
+					<?php if( is_user_logged_in() ): ?>
+					
+						<dd class="location"><?php jr_location(); ?></dd>
+
+					<?php else : ?>
+
+						<dt>
+							<dd class="location">
+								<a href="<?php echo bloginfo("url") ?>/login">Cadastre-se</a><br>
+								<span>Para ver cidade e estado</span>
+							</dd>
+						</dt>				
+
+					<?php endif; ?>
 
 					<dt><?php _e( 'Date Posted', APP_TD ); ?></dt>
 					<dd class="date">

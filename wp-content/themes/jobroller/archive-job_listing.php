@@ -20,7 +20,7 @@
 				<a href="<?php echo esc_url( add_query_arg( 'post_type', APP_POST_TYPE, get_bloginfo('rss2_url') ) ); ?>"><i class="icon dashicons-before"></i></a>
 			</small>
 
-			<?php printf( __( 'Latest Jobs%s', APP_TD ), ( ! empty( $paged ) && $paged > 1 ? ' ' . sprintf( __( '(page %d)', APP_TD ), $paged ) : '' ) ); ?>
+			<?php printf( __( 'Últimas vagas%s', APP_TD ), ( ! empty( $paged ) && $paged > 1 ? ' ' . sprintf( __( '(page %d)', APP_TD ), $paged ) : '' ) ); ?>
 		</h2>
 
 		<?php jr_filter_form(); ?>

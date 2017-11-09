@@ -28,7 +28,7 @@
 
                     <dd class="title">
 
-						<strong><a href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></strong>
+						<strong><a target="_blank" href="<?php esc_url( the_permalink() ); ?>"><?php the_title(); ?></a></strong>
 
 					<?php
 						if ( 'public' != $jr_options->jr_resume_listing_visibility ) {
@@ -38,7 +38,7 @@
 						$terms = wp_get_post_terms( $post->ID, APP_TAX_RESUME_CATEGORY );
 						if ($terms): ?>
 
-							<?php echo __( ' in ',APP_TD ); ?><a href="<?php echo esc_url( get_term_link( $terms[0]->slug, APP_TAX_RESUME_CATEGORY ) ); ?>"><?php echo $terms[0]->name; ?></a>
+							<?php echo __( ' in ',APP_TD ); ?><a target="_blank" href="<?php echo esc_url( get_term_link( $terms[0]->slug, APP_TAX_RESUME_CATEGORY ) ); ?>"><?php echo $terms[0]->name; ?></a>
 
 						<?php endif; ?>
 

@@ -109,7 +109,7 @@ $settings = array(
 	// job seekers
 	'jr_allow_job_seekers'			=> 'yes',
 	'jr_allow_recruiters'			=> '',
-	'jr_my_profile_button_text'		=> 'Submit your Resume, update your profile, and allow employers to find <em>you</em>!',
+	'jr_my_profile_button_text'		=> 'Envie o seu currículo, atualize seu perfil e deixe os empregadores encontrarem <em>você</em>!',
 	'jr_submit_resume_button_text'	=> 'Register as a Job Seeker to submit your Resume.',
 
 	// subscriptions

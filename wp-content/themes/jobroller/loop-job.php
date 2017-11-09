@@ -55,7 +55,21 @@
 					<?php appthemes_after_post_title( APP_POST_TYPE ); ?>
 
                     <dt><?php _e('Location', APP_TD); ?></dt>
-					<dd class="location"><?php jr_location(); ?></dd>
+
+					<?php if( is_user_logged_in() ): ?>
+					
+						<dd class="location"><?php jr_location(); ?></dd>
+
+					<?php else : ?>
+
+						<dt>
+							<dd class="location">
+								<a href="<?php echo bloginfo("url") ?>/login">Cadastre-se</a><br>
+								<span>Para ver cidade e estado</span>
+							</dd>
+						</dt>				
+
+					<?php endif; ?>
 
                     <dt><?php _e('Date Posted', APP_TD); ?></dt>
                     <dd class="date"><strong><?php echo date_i18n( __( 'j M', APP_TD ), strtotime( $post->post_date ) ); ?></strong> <span class="year"><?php echo date_i18n( __( 'Y', APP_TD ), strtotime( $post->post_date ) ); ?></span></dd>

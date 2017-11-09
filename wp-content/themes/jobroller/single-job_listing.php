@@ -33,17 +33,14 @@
 
 					<p class="meta">
 						<?php jr_job_author(); ?>
-
-						&ndash;
-
-						<?php jr_location( true ); ?>
+						<br><?php jr_location( true ); ?>
 					</p>
 
 					<div class="clear"></div>
 
 				</div><!-- end section_header -->
 
-				<div class="section_content">
+				<div id="section_content_single_job" class="section_content">
 
 					<?php do_action('job_main_section', $post); ?>
 
@@ -62,7 +59,11 @@
 
 					<?php appthemes_before_post_content(); ?>
 
-					<?php the_content(); ?>
+					<div id="descr_vaga">
+
+						<?php the_content(); ?>
+
+					</div>
 
 					<?php the_job_listing_fields(); ?>
 
@@ -78,9 +79,39 @@
 
 					<?php if ( $jr_options->jr_submit_how_to_apply_display && $how_to_apply = jr_get_the_how_to_apply() ): ?>
 
+					<?php if( is_user_logged_in() ): ?>
+
+						<div class="googleadsense">
+							<script async src="<?php echo bloginfo('template_url') ?>/framework/js/adsbygoogle.js"></script>
+							<ins class="adsbygoogle"
+							     style="display:block; text-align:center;"
+							     data-ad-layout="in-article"
+							     data-ad-format="fluid"
+							     data-ad-client="ca-pub-9269538659312953"
+							     data-ad-slot="5963844253">
+							</ins>
+							<script>
+							     (adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						</div>
+
+					<?php endif; ?>						
+
+					<div id="getvagas">
+						
 						<h2 class="how-to-apply"><?php _e( 'How to Apply', APP_TD ) ?></h2>
 
-						<?php echo $how_to_apply; ?>
+						<?php if( (is_user_logged_in() && current_user_can('job_seeker')) OR current_user_can('manage_options') ) : ?>
+
+							<p><?php echo $how_to_apply; ?></p>
+
+						<?php else : ?>
+
+							<h3 class="setfacalogin">Voce precisa se <a href="<?php bloginfo("url") ?>/login">cadastrar</a> (é gratuito) para ver os detalhes da vaga.</h3>
+							
+						<?php endif; ?>
+		
+					</div>
 
 					<?php endif; ?>
 
@@ -99,7 +130,7 @@
 									<div class="job-expires-in"><i class="icon dashicons-before"></i> <strong><?php echo jr_remaining_days( $post ); ?></strong>.</div>
 
 								<?php endif; ?>
-
+								
 							<?php endif; ?>
 
 						</em>

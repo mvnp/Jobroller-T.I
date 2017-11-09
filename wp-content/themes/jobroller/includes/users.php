@@ -410,9 +410,13 @@ function jr_job_author() {
 	$company_name = wptexturize( strip_tags( get_post_meta( $post->ID, '_Company', true ) ) );
 
 	if ( $company_name ) {
-		if ( $company_url = esc_url( get_post_meta( $post->ID, '_CompanyURL', true ) ) ) {
-			?><a href="<?php echo esc_url( $company_url ); ?>" rel="nofollow"><?php echo $company_name; ?></a><?php
-		} else {
+		if ( $company_url = esc_url( get_post_meta( $post->ID, '_CompanyURL', true ) ) ) { ?>
+			<?php if( is_user_logged_in() ): ?>
+				<a href="<?php echo esc_url( $company_url ); ?>" target="_blank" rel="nofollow"><?php echo $company_name; ?></a>
+			<?php else: ?>
+				<a href="<?php echo bloginfo( 'url' ); ?>/login" rel="nofollow">Cadastre-se para ver a empresa</a>
+			<?php endif; ?>
+		<?php } else {
 			echo $company_name;
 		}
 		$format = __( ' &ndash; Posted by <a href="%s">%s</a>', APP_TD );

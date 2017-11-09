@@ -399,9 +399,12 @@ class JR_Widget_Social extends WP_Widget {
 		<?php echo $before_widget; ?>
 
 		<ul class="social-widgets">
-			<li class="rss-balloon">
-				<a href="<?php echo esc_url( $jr_options->jr_feedburner_url ? $jr_options->jr_feedburner_url : get_bloginfo_rss( 'rss2_url' ) . '?post_type=job_listing' );  ?>"><i class="icon dashicons-before"></i><?php _e( 'Subscribe', APP_TD ) ?></a><br/>
-				<span><?php _e( 'Receive the latest job listings', APP_TD ) ?></span>
+			<br/><li class="rss-balloon">
+				<!-- a href="<?php echo esc_url( $jr_options->jr_feedburner_url ? $jr_options->jr_feedburner_url : get_bloginfo_rss( 'rss2_url' ) . '?post_type=job_listing' );  ?>"><i class="icon dashicons-before"></i><?php _e( 'Subscribe', APP_TD ) ?></a><br/ -->
+				<a href="https://www.facebook.com/groups/programadoresincriveis" target="_blank">
+					<i class="icon dashicons-before"></i><?php _e( 'Programadores Incríveis', APP_TD ) ?>
+				</a><br/>
+				<span>Acompanhe aqui e nas redes sociais</span>
 			</li>
 
 			<li class="twitter-balloon">

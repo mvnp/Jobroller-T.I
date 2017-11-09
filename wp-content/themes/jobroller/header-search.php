@@ -23,6 +23,46 @@
 
 		</div><!-- end search-wrap -->
 
+		<div class="aviso"><p>Em breve, várias vagas em vários estados.</p></div>
+		
+		<?php if( is_user_logged_in() ): ?>
+
+			<div class="aviso_2"><p>Precisa desativar <strong>AdBlock</strong> e se <a href="<?php echo bloginfo('url') ?>/login">cadastrar</a>.</p></div>
+
+		<?php endif; ?>
+
 	</form>
+
+	<?php if( is_user_logged_in() ): ?>
+
+		<div id="anuncios" style="clear:both;display:block">
+			<div style="width: 48%;float: left">
+				<!-- Anúncio 336x280 -->
+				<script async src="<?php echo bloginfo('template_url') ?>/framework/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-9269538659312953"
+				     data-ad-slot="5750847992"
+				     data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			<div style="width: 48%;float: right">
+				<!-- Anúncio 336x280 -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-9269538659312953"
+				     data-ad-slot="5750847992"
+				     data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			<div style="clear:both;display:block"></div>
+
+		</div>
+
+	<?php endif; ?>
 
 <?php endif; ?>

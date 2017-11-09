@@ -19,7 +19,7 @@
 			<div class="clear"></div>
 
 			<div class="copyright">
-				<a href="https://www.appthemes.com/themes/jobroller/" target="_blank" rel="nofollow">JobRoller Theme</a> - <?php _e('Powered by', APP_TD); ?> <a href="https://wordpress.org" target="_blank" rel="nofollow">WordPress</a>
+				<a href="https://www.facebook.com/groups/programadoresincriveis" target="_blank" rel="nofollow">Programadores Incríveis</a> - <?php _e('Desenvolvido por', APP_TD); ?> <a href="https://www.facebook.com/axitechinformatica" target="_blank" rel="nofollow">AXITECH Web Softwares</a>
 			</div>
 
 		</div><!-- end inner -->

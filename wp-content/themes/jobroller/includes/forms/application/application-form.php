@@ -55,11 +55,11 @@ function jr_application_form() {
 			<?php endif; ?>
 
 			<p class="optional">
-				<label for="your_cv"><?php echo sprintf( __( 'Upload resum&eacute; (%s)', APP_TD ), jr_get_allowed_extensions_for( 'apply_job_cv', ', ' ) ); ?></label>
+				<label for="your_cv"><?php echo sprintf( __( 'Upload Curriculum Vitae (CV) (%s)', APP_TD ), jr_get_allowed_extensions_for( 'apply_job_cv', ', ' ) ); ?></label>
 				<input type="file" class="text" name="your_cv" id="your_cv" />
 			</p>
 			<p class="optional">
-				<label for="your_coverletter"><?php echo sprintf( __( 'Upload cover letter (%s)', APP_TD ), jr_get_allowed_extensions_for( 'apply_job_cv_letter', ', ' ) ); ?></label>
+				<label for="your_coverletter"><?php echo sprintf( __( 'Upload Carta Recomendação ou Motivação (%s)', APP_TD ), jr_get_allowed_extensions_for( 'apply_job_cv_letter', ', ' ) ); ?></label>
 				<input type="file" class="text" name="your_coverletter" id="your_coverletter" />
 			</p>
 			<?php

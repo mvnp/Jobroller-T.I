@@ -5,7 +5,10 @@
 		<?php if ( !is_user_logged_in() || ( is_user_logged_in() && current_user_can('can_submit_job') ) ): ?>
 
 			<div>
-				<a href="<?php echo esc_url( jr_get_listing_create_url() ); ?>" class="button"><span><?php _e('Submit a Job',APP_TD); ?></span></a>
+				<!-- a href="<?php echo esc_url( jr_get_listing_create_url() ); ?>" class="button" target="_blank" -->
+				<a href="http://axitech.com.br/vagas.php" class="button" target="_blank">
+					<span><?php _e('Submit a Job',APP_TD); ?></span>
+				</a>
 				<?php echo jr_get_submit_footer_text(); ?>
 			</div>
 

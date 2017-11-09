@@ -19,11 +19,14 @@
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="google-site-verification" content="j87SZUiLkU6Exe1_ra1d52Kqx4Dm942U4O3W-Inc8Wc" />
+	<meta name="google-site-verification" content="j87SZUiLkU6Exe1_ra1d52Kqx4Dm942U4O3W-Inc8Wc" />
 
     <title><?php wp_title(''); ?></title>
 
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php echo esc_url( $jr_options->jr_feedburner_url ? $jr_options->jr_feedburner_url : get_bloginfo_rss('rss2_url') ); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/custom.css" />
 
 	<?php if ( is_singular() ): wp_enqueue_script( 'comment-reply' ); endif; ?>
 

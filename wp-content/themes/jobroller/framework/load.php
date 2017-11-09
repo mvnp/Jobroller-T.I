@@ -171,5 +171,5 @@ function _appthemes_no_updater_plugin_warning() {
 	$link = html_link( 'https://www.appthemes.com/blog/new-plugin-to-keep-your-themes-healthy/', 'AppThemes Updater' );
 	$msg = sprintf( __( 'The %s plugin is not detected. We strongly recommend you download and activate it so you can receive the latest updates when available. It also protects your theme from being overwritten by a similarly named theme.', APP_TD ), $link );
 
-	echo wp_kses_post( scb_admin_notice( $msg, 'notice notice-warning' ) );
+	// echo wp_kses_post( scb_admin_notice( $msg, 'notice notice-warning' ) );
 }

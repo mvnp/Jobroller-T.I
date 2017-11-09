@@ -1554,18 +1554,18 @@ class JR_Search extends APP_View {
 		$location = get_query_var('location') ? get_query_var('location') : ( ! empty( $_GET['location'] ) ? $_GET['location'] : '' );
 
 		if ( $search = get_search_query() ) {
-			$term_heading = sprintf( __( 'Searching %1$s for &ldquo;%2$s&rdquo;', APP_TD ), strtolower( $post_type_obj->labels->singular_name ), $search );
+			$term_heading = sprintf( __( 'Buscar %1$s para &ldquo;%2$s&rdquo;', APP_TD ), strtolower( $post_type_obj->labels->singular_name ), $search );
 		} else {
-			$term_heading = sprintf( __( 'Searching %s ', APP_TD ), strtolower( $post_type_obj->labels->singular_name ) );
+			$term_heading = sprintf( __( 'Buscar %s ', APP_TD ), strtolower( $post_type_obj->labels->singular_name ) );
 		}
 
 		if ( $location ) {
 			$radius = get_query_var('radius');
 
 			if ( 'km' == $jr_options->jr_distance_unit ) {
-				$location_heading = sprintf( __( 'within %1$s kilometers of %2$s', APP_TD ), $radius, $location );
+				$location_heading = sprintf( __( 'a %1$s km de %2$s', APP_TD ), $radius, $location );
 			} else {
-				$location_heading = sprintf( __( 'within %1$s miles of %2$s', APP_TD ), $radius, $location );
+				$location_heading = sprintf( __( 'a %1$s milhas de %2$s', APP_TD ), $radius, $location );
 			}
 
 			$location_heading = $term_heading ? ' ' . $location_heading : $location_heading;
@@ -1986,7 +1986,7 @@ class JR_Job_Single extends APP_View {
 
 		if ( ! is_user_logged_in() && 'publish' === $status && $jr_options->apply_reg_users_only ) {
 			$register_link = wp_login_url( get_permalink() );
-			appthemes_display_notice( 'notice', sprintf( __( 'Please <a href="%s">login/register</a> to apply for this job.', APP_TD ), esc_url( $register_link ) ) );
+			appthemes_display_notice( 'notice', sprintf( __( 'Favor efetuar <a href="%s">login ou cadastro</a> para postular a esta vaga.', APP_TD ), esc_url( $register_link ) ) );
 		}
 
 	}

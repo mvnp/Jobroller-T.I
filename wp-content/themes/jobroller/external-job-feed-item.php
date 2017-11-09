@@ -10,7 +10,7 @@
 
 		<dt><?php _e( 'Job', APP_TD ); ?></dt>
 		<dd class="title">
-			<strong><a href="<?php echo esc_url( $job['url'] ); ?>" target="_blank" rel="nofollow" onmousedown="<?php echo esc_attr( $job['onmousedown'] ); ?>"><?php echo esc_html( $job['jobtitle'] ); ?></a></strong>
+			<strong><a href="<?php echo esc_url( $job['url'] ); ?>" rel="nofollow" onmousedown="<?php echo esc_attr( $job['onmousedown'] ); ?>"><?php echo esc_html( $job['jobtitle'] ); ?></a></strong>
 			<?php echo wptexturize( $job['company'] ); ?>
 		</dd>
 
